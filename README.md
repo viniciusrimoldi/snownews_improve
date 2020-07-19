@@ -34,6 +34,24 @@ Scripts são divididos em arquivos separados para facilitar o manutenção. Comp
 
 Os \<item\> dos link que deseja favoritar é selecionado e armazenado em um arquivo dentro de um diretório chamado _favorites_ dentro do diretório padrão do __snownews__.
 
+### Pré-visualização
+O usuário pode construir scripts que filtram o conteúdo do feed de acordo com o domínio do site. A pré-visualização é chamada pelo o script _preview.sh_ que define o domínio do site e direciona para o script de filtragem contido no diretório _~/.snownews/scripts/previews.d_. Dentro deste diretório se encontram scripts específicos de filtragem como _~/.snownews/scripts/previews.d/nature.sh_ que filtra o conteúdo dos feeds do <feed.nature.com>:
+
+>
+> FILE\_TEMP=/tmp/snownews.temp.html
+> LINK="$1";
+>
+> echo '<meta charset="UTF-8">' > $FILE\_TEMP;
+>
+> lynx -source "$LINK" \
+>        | tr '\n' ' ' \
+>        | sed 's/<div class="article/\n<div class="article/g' \
+>        | grep -m 1 '\_\_body ' \
+>        | sed 's/href="/id="/g' >> $FILE\_TEMP;
+>
+> lynx $FILE\_TEMP;
+>
+
 
 ## Instação
 Para as melhoras do __snownews__ utilize o _install.sh_ do projeto.
