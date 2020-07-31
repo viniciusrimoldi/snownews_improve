@@ -26,6 +26,9 @@ Exemplo de edição do arquivo _~/.snownews/urls_:
 
 _Obs: O mantenedor utiliza e mantem o __lynx__ por escolha pessoal, visto que alguns servidores impedem a conexão com __curl__ sem __-user-agent__ reconhecido pelo servidor._
 
+### Construção de feeds
+Devido a sua alta simplicidade, o usuário pode construir feeds desejados ao seu uso (filtrando padrões desejados) ou mesmo construir um feed para sites que não apresentam o suporte rss. Para isso basta construir um __shellscript__ e o adicionar no _~/.snownews/scripts/constructions.d/_. Depois adicionar no local da url o comando `exec:cat ~/.snownews/scripts/constructions.d/exemplo.sh` no arquivo _~/.snownews/urls_.
+
 ### Favoritos
 Scripts são divididos em arquivos separados para facilitar o manutenção. Composto por 03 frentes:
 - _fav_read.sh_ (construção de um rss com os favoritos);
@@ -46,9 +49,9 @@ O usuário pode construir scripts que filtram o conteúdo do feed de acordo com 
 >
   
 ### Ouvir podcasts
-Pode se seguir feeds de podcasts e os ouvir. Isso pode ser feito chamando um navegador (por exemplo: Firefox) ou mesmo com algum aplicativo em linha de comando. O mantenedor tenta manter sempre as aplicações no console, evitando terminais graficos. Dessa forma, utiliza o _mplayer -cache 8192 www.podcast_exemplo.com_ para executar os seus podcasts selecionados.
+Pode se seguir feeds de podcasts e os ouvir. Isso pode ser feito chamando um navegador (por exemplo: __Firefox__) ou mesmo com algum aplicativo em linha de comando. O mantenedor tenta manter sempre as aplicações no console, evitando terminais graficos. Dessa forma, utiliza o __mplayer -cache 8192 www.podcast_exemplo.com__ para executar os seus podcasts selecionados.
 
-Vale lembrar que o _snownews_improve_ não busca automaticamento o link que direciona para o áudio dentro do site do podcasts. Ou seja, para um site especifico deve se utilizar um _shell script_ que capture o link do audio para ser passado ao _mplayer_, por exemplo.
+Vale lembrar que o _snownews_improve_ não busca automaticamento o link que direciona para o áudio dentro do site do podcasts. Ou seja, para um site especifico deve se utilizar um __shellscript__ que capture o link do audio para ser passado ao __mplayer__, por exemplo.
 
 Ou pode se pesquisar se existe suporte para o site que está procurando no repositório de feeds deste repositório.
 
@@ -79,5 +82,5 @@ Licenciado por GpL-v3.
 
 
 ## Suporte e Bugs
-Favor enviar erros, bugs e sugestões de melhora para o email do mantenedor (<viniciusrimoldi@gmail.com>).
+Favor enviar erros, bugs e sugestões de melhora para o email do mantenedor (<viniciusrimoldii@gmail.com>).
 
