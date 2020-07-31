@@ -6,7 +6,11 @@ Script para melhorar snownews, com opção de favoritos e suporte para https.
 Esse projeto fornece scripts em bash para melhorar a usabilidade do __snownews__. Como opções de favoritar o RSS, que é armazenado em um feed de favoritos. Outra funcionalidade é a instrução para suporte a _https:_.
 
 ### Por que usar __snownews_improve__?
-Devido a sua alta simplicidade, os scripts permitem enorme adequação a suas necessidades, como (a) baixar um determinado dado de um conteúdo da página do rss, (b) baixar e salvar a página em formato pdf para posterior leitura, (c) entre outras inumeras possibilidades. __O céu é o limite__ xD
+Devido a sua alta simplicidade, os scripts permitem enorme adequação a suas necessidades, como:
+- baixar um determinado dado de um conteúdo da página do rss.
+- baixar e salvar a página em formato pdf para posterior leitura.
+- ouvir seus podcasts na linha de comando.
+- entre outras inumeras possibilidades. (__O céu é o limite__ xD)
 
 ### Como adequar ao meu uso?
 Para isso basta construir um __shellscript__ com sua necessidade e incorporar aos scripts padrões do __snownews_improve__, seja com chamada de função ou mesmo adicionando as funções no arquivo padrão.
@@ -53,15 +57,15 @@ Pode se seguir feeds de podcasts e os ouvir. Isso pode ser feito chamando um nav
 
 Vale lembrar que o _snownews_improve_ não busca automaticamento o link que direciona para o áudio dentro do site do podcasts. Ou seja, para um site especifico deve se utilizar um __shellscript__ que capture o link do audio para ser passado ao __mplayer__, por exemplo.
 
-Ou pode se pesquisar se existe suporte para o site que está procurando no repositório de feeds deste repositório.
+Pode pesquisar se existe suporte para o site que está procurando no repositório de feeds.
 
 
 ## Instalação
-Para as melhoras do __snownews__ utilize o _install.sh_ do projeto.
+Para as baixar __snownews__ utilize o _install.sh_ do projeto. Ou use o git-clone.
 
 
 ## Dependências
-Dependencias dos scripts, podem ser alterados com a edição dos scripts:
+Dependencias dos scripts:
 - snownews (obviamente);
 - lynx.
 
@@ -70,7 +74,10 @@ Dependencias dos scripts, podem ser alterados com a edição dos scripts:
 ### Versão 1.0
 Suporte:
 - https (exemplo de uso);
-- favoritos (adição / leitura / deleção).
+- favorite -- (adição / leitura / deleção).
+- preview -- pré-visualização do conteúdo.
+- play podcast -- ouvir podcasts na linha de comando.
+- download -- baixar o conteúdo do feed.
 
 
 ## Mantenedor
