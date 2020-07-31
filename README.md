@@ -44,9 +44,16 @@ O usuário pode construir scripts que filtram o conteúdo do feed de acordo com 
 > lynx -source \"$LINK\" | tr '\n' ' ' | sed 's/<div class=\"article/\\n<div class=\"article/g' | grep -m 1 '\_\_body ' | sed 's/href=\"/id=\"/g' >> $FILE\_TEMP;
 > lynx $FILE\_TEMP;
 >
+  
+### Ouvir podcasts
+Pode se seguir feeds de podcasts e os ouvir. Isso pode ser feito chamando um navegador (por exemplo: Firefox) ou mesmo com algum aplicativo em linha de comando. O mantenedor tenta manter sempre as aplicações no console, evitando terminais graficos. Dessa forma, utiliza o _mplayer -cache 8192 www.podcast_exemplo.com_ para executar os seus podcasts selecionados.
+
+Vale lembrar que o _snownews_improve_ não busca automaticamento o link que direciona para o áudio dentro do site do podcasts. Ou seja, para um site especifico deve se utilizar um _shell script_ que capture o link do audio para ser passado ao _mplayer_, por exemplo.
+
+Ou pode se pesquisar se existe suporte para o site que está procurando no repositório de feeds deste repositório.
 
 
-## Instação
+## Instalação
 Para as melhoras do __snownews__ utilize o _install.sh_ do projeto.
 
 
